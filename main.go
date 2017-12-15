@@ -4,15 +4,15 @@ import (
 	"net/http"
 	"os"
 	"time"
+
 	"github.com/barryz/loghandler/log"
 )
-
 
 func main() {
 	mux := http.DefaultServeMux
 	mux.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		w.Write([]byte("hello world"))
-		// Fot test , sleep 0.5 seconds
+		// For test, sleep 0.5 seconds
 		time.Sleep(500 * time.Millisecond)
 		return
 	})
